@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Neuton:wght@200&display=swap');
+
+.row{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0%;
+    position: absolute;
+}
+
+.row1{
+    width: 100%;
+    position: relative;
+}
+
+.center{
+    text-align: center;
+}
+
+h1.center{
+    position: relative;
+    top: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+}
+
+.row2{
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.inp{
+    width: 40rem;
+    height: 50px;
+}
+
+.btn-submit{
+    width: 100px;
+    height: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.row3{
+    position: relative;
+    top: 10px;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.row3 p{
+    font-family: 'Neuton', serif;
+    font-size: 20px;
+}

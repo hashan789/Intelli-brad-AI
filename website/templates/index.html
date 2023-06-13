@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <title>intelli brad AI</title>
+</head>
+<body>
+    <div class="row">
+        <div class="row1">
+            <h1 class="center">Intelli brad AI</h1>
+        </div>
+
+        <div class="row3">
+                <p>{{ respo }}</p>
+        </div>
+
+        <div class="row2">
+          <form action="/chat" method="post" value="message">
+            <input type="text" name="message" class="inp">
+            <button type="submit" class="btn-submit">submit</button>
+          </form>
+        </div>
+    </div>
+</body>
+</html>
