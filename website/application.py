@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, jsonify, render_template, request
 import requests
 import json, sys
 
@@ -13,7 +13,7 @@ intents = json.loads(open('intends.json').read())
 @application.route('/')
 def index():
 
-    return render_template("index.html",respo='')
+    return render_template("index.html")
 
 @application.route('/chat', methods=["POST"])
 def chat():
@@ -24,11 +24,11 @@ def chat():
             message = name
             ints = predict_class(message)
             res = get_response(ints, intents)
+            msg = {
+                "answer" : res
+            }
 
-
-            return render_template("index.html",respo=res)
-     else:
-        return render_template("index.html",respo='')
+            return jsonify(msg)
 
 if __name__ == '__main__':
     application.run(debug=True)
