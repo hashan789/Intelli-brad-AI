@@ -15,10 +15,9 @@ def index():
 
     return render_template("index.html")
 
-@application.route('/chat', methods=["POST"])
+@application.post('/chat')
 def chat():
-     if request.form['message']:
-        name = request.form['message']
+        name = request.get_json().get("message")
 
         while True:
             message = name
