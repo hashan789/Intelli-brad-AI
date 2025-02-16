@@ -91,9 +91,11 @@ h1.center{
 .chatbox-msg{
     margin-top: auto;
     display: flex;
-    overflow-y:auto;
     flex-direction: column-reverse;
     width: 50vw;
+    height: 250px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .msg-item {
