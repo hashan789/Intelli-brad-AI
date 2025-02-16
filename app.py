@@ -1,8 +1,11 @@
 from flask import Flask, jsonify, render_template, request
 import requests
 import json, sys
+import os
 
-sys.path.insert(0,'E:\\programs\\ai chatbot\\prepared')
+dir_path = os.getcwd()
+
+sys.path.insert(0,f'{dir_path}\\prepared')
 
 from chatbot import predict_class, get_response
 
